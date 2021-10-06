@@ -23,15 +23,15 @@
           <span></span>
           <ul class="menu">
             <!-- <li><a href="./index.html" title="Home"> Home </a></li> -->
-            <li><a href="./about.html" title="About"> About </a></li>
-            <li><a href="./projects.html" title="Projects"> Projects </a></li>
-            <li><a href="./resume.html" title="Contact"> Contact </a></li>
+            <li><a href="#about" title="About"> About </a></li>
+            <li><a href="#projects" title="Projects"> Projects </a></li>
+            <li><a href="#contact" title="Contact"> Contact </a></li>
           </ul>
         </div>
       </nav>
     </header>
     <!-- HERO SECTION -->
-    <div class="about-section">
+    <div class="about-section" id="about">
       <span class="about-section-text">
         <h1>
           I'm Leanne <a href="./about.html" title="More about me">&#8594;</a>
@@ -44,53 +44,91 @@
       </span>
     </div>
     <!-- PROJECT SECTION -->
-    <div>
-      <div>
+      <div id="projects">
         <h2 class="project-header">Projects</h2>
-        <span class="project-section">
+        <div class="project-section">
+
           <div class="project-cards">
-            <img src="images/plantpartymainpage.png" alt="Plany Party Image" />
-            <h3>Plant Party</h3>
-            <h5>
-              Built with React, Javascript, NodeJS, Express, MongoDB, CSS, and a
-              Green Thumb.
-            </h5>
-            <hr />
-            <p>
+            <div>
+              <h3>Plant Party</h3>
+              <img src="images/plantpartymainpage.png" alt="Plany Party Image" />
+              <p>
               A visual discovery engine for finding houseplants, plant care
               resources, and a community forum to engage with other plant
               lovers.
-            </p>
+              </p>
+            </div>
+            <div>
+              <div class="project-links">
+                <a href="https://github.com/leannewilson/plant-party" target="_blank"><i class="fas fa-code"></i>See Code</a>
+                <a href="https://plant-party.netlify.app/auth" target="_blank"><i class="fas fa-globe"></i>View Site</a>
+              </div>
+                <h5>
+                Built with React, NodeJS, Express, and MongoDB.
+                </h5>
+            </div>
           </div>
+
           <div class="project-cards">
-            <img
-              src="images/boomboommainpage.png"
-              alt="Boom Boom Macaroon Image"
-            />
-            <h3>Boom Boom Macaroon</h3>
-            <h5>Made with Javascript, NodeJS, and CSS.</h5>
-            <hr />
-            <p>
-              A website designed to search a multitude of topics in cities
-              around the world.
-            </p>
+            <div>
+              <h3>Boom Boom Macaroon</h3>
+              <img
+                src="images/boomboommainpage.png"
+                alt="Boom Boom Macaroon Image"
+              />
+              <p>
+                A website designed to search a multitude of topics in cities
+                around the world. Using Yelp's API I am able to pull a data from all over the world.
+              </p>
+            </div>
+            <div>
+              <div class="project-links">
+                <a href="https://github.com/leannewilson/boom-boom-macaron" target="_blank"><i class="fas fa-code"></i>See Code</a>
+                <a href="https://boom-boom-macaron.netlify.app/" target="_blank"><i class="fas fa-globe"></i>View Site</a>
+              </div>
+              <h5>Made with Javascript, NodeJS, and CSS.</h5>
+            </div>
           </div>
+
           <div class="project-cards">
-            <img src="images/dpmb.png" alt="Don't Pop My Bubble Image" />
-            <h3>Don't Pop My Bubble</h3>
-            <h5>Made with Javascript, Canvas, HTML and CSS.</h5>
-            <hr />
-            <p>
+            <div>
+              <h3>Don't Pop My Bubble</h3>
+              <img src="images/dpmb.png" alt="Don't Pop My Bubble Image" />
+              <p>
               Use the arrow keys maneuver and collect floating bubbles, increase
               in size and gain points, all while avoiding the flying darts so
               you don't get popped.
-            </p>
+              </p>
+            </div>
+            <div>
+              <div class="project-links">
+                <a href="https://github.com/leannewilson/dont-pop-my-bubble" target="_blank"><i class="fas fa-code"></i>See Code</a>
+                <a href="https://dont-pop-my-bubble.herokuapp.com/" target="_blank"><i class="fas fa-globe"></i>View Site</a>
+              </div>
+              <h5>Made with Javascript, Canvas, HTML and CSS.</h5>
+            </div>
           </div>
-        </span>
+
+          <div class="project-cards">
+            <div>
+              <h3>Gem Lending Team</h3>
+              <img src="images/gem-logo.png" alt="Gem Lending Team" />
+              <p>
+              This Lending teams website needs a huge makeover and I'm here to help. It's going to be full loan resources, FAQ's, and employee information.
+              </p>
+            </div>
+            <div>
+              <div class="project-links">
+                <h6>Coming Soon!</h6>
+              </div>
+              <h5>Made with React-Bootstrap and CSS.</h5>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <ul>
         <li><a href="mailto:leannewilson05@gmail.com"><i class="fas fa-envelope"></i></a></li>
         <li><a href="https://github.com/leannewilson" target="_blank"><i class="fab fa-github"></a></i></li>
@@ -98,6 +136,4 @@
       </ul>
     </footer>
   </body>
-
-  <script src=""></script>
 </html>
