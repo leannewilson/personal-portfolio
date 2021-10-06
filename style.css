@@ -247,3 +247,7 @@ body {
 .footer li {
   list-style-type: none;
 }
+
+.footer a {
+  color: white;
+}
