@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+/* 
+tan: #e7bc91;
+dark blue: #18314f;
+light blue: 
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Staatliches", cursive;
+  font-size: 3vmax;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/*** NAVBAR ***/
+.nav-bar {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  /* position: fixed;
+  background-color: white; */
+}
+.logo {
+  margin: auto 0;
+  padding-left: 1em;
+}
+.logo a {
+  text-decoration: none;
+  color: #18314f;
+}
+.nav-bar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  color: #18314f;
+}
+
+.nav-bar li a:hover {
+  text-decoration: underline;
+}
+
+/* HAMBURGER MENU */
+@media screen and (max-width: 787px) {
+  .menuToggle {
+    position: absolute;
+    top: 35px;
+    right: 50px;
+  }
+  .menuToggle .input-hidden {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  .menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #18314f;
+    border-radius: 3px;
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  .menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  .menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  .menuToggle .input-hidden:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #18314f;
+  }
+
+  .menuToggle .input-hidden:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  .menuToggle .input-hidden:checked ~ span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  .menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 125px;
+    right: -90px;
+    background: white;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .menu li {
+    padding: 10px 0;
+    font-size: 22px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .menuToggle .input-hidden:checked ~ ul {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 787px) {
+  .nav-bar ul {
+    width: 730px;
+    padding-left: 0;
+    margin: -10px;
+  }
+  .menuToggle input {
+    opacity: 0;
+  }
+}
+
+/*** HOME PAGE ***/
+.about-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("images/home-background.jpeg");
+}
+
+.about-section-text {
+  color: #e7bc91;
+  text-align: right;
+}
+
+.about-section-text h1 {
+  margin: 0;
+  padding: 1em 1em 0 0;
+}
+.about-section-text a {
+  text-decoration: none;
+  color: #e7bc91;
+  font-weight: 900;
+  font-size: 18px;
+  vertical-align: middle;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 3px solid #e7bc91;
+  font-size: 2vmax;
+}
+
+.about-section-text a:hover {
+  color: white;
+}
+.about-section-text p {
+  padding-right: 3em;
+  background: -webkit-linear-gradient(white 50%, #e7bc91 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/*** PROJECTS ***/
+.project-header {
+  text-align: center;
+  color: #18314f;
+  margin: 0;
+}
+.project-section {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-cards {
+  width: 300px;
+  height: 600px;
+  border: 1px solid #18314f;
+  box-shadow: 5px 5px 20px #18314f;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.project-cards img {
+  width: 200px;
+  border-radius: 10%;
+  margin: 5px;
+}
+
+.project-cards h3 {
+  font-size: 30px;
+}
+
+.project-cards h5 {
+  font-size: 20px;
+}
+
+.project-cards p {
+  font-size: 20px;
+}
+
+/*** FOOTER ***/
+
+.footer {
+  background-color: #18314f;
+  color: white;
+  width: 100%;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer li {
+  list-style-type: none;
+}
